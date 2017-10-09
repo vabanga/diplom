@@ -26,10 +26,10 @@
                     <tbody>
                     @foreach($themes as $theme)
                         <tr>
-                            <td><?=$theme->name?></td>
-                            <td><?php echo $countQuest = \App\Theme_Question::countQuestion($theme->name);?></td>
-                            <td><?php echo $countPub = \App\Theme_Question::countPublic($theme->name);?></td>
-                            <td><?php echo $countUnans = \App\Theme_Question::countUnanswered($theme->name);?></td>
+                            <td>{{$theme->name}}</td>
+                            <td>{{$countQuest = \App\Theme_Question::countQuestion($theme->name)}}</td>
+                            <td>{{$countPub = \App\Theme_Question::countPublic($theme->name)}}</td>
+                            <td>{{$countUnans = \App\Theme_Question::countUnanswered($theme->name)}}</td>
                         </tr>
                     @endforeach
                     </tbody>

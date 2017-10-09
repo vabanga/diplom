@@ -22,19 +22,19 @@
 <section class="cd-faq">
     <ul class="cd-faq-categories">
         @foreach($themes as $theme)
-            <li><a href="#<?=$theme?>"><?=$theme?></a></li>
+            <li><a href="#{{$theme}}">{{$theme}}</a></li>
         @endforeach
     </ul> <!-- cd-faq-categories -->
     <div class="cd-faq-items">
         @foreach($themes as $theme)
-            <ul id="<?=$theme?>" class="cd-faq-group">
-                <li class="cd-faq-title"><h2><?=$theme?></h2></li>
+            <ul id="{{$theme}}" class="cd-faq-group">
+                <li class="cd-faq-title"><h2>{{$theme}}</h2></li>
                 @foreach($tabJoin as $tab)
                     @if($tab->theme == "$theme")
                         <li>
-                            <a class="cd-faq-trigger" href="#0"><?=$tab->questions?></a>
+                            <a class="cd-faq-trigger" href="#0">{{$tab->questions}}</a>
                             <div class="cd-faq-content">
-                                <p><?=$tab->answer?></p>
+                                <p>{{$tab->answer}}</p>
                             </div> <!-- cd-faq-content -->
                         </li>
                     @endif

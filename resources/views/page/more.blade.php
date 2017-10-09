@@ -11,7 +11,7 @@
 @section('content')
     <div class="row">
         <main class="col">
-            <h1><?=$themeName?> more</h1>
+            <h1>{{$themeName}} more</h1>
 
             <h1>Move question</h1>
             <div class="form-control">
@@ -51,10 +51,10 @@
                         <tbody>
                         @foreach($publics as $public)
                             <tr>
-                                <td><?=$public->questions?></td>
-                                <td><?=$public->author?></td>
-                                <td><?=$public->create?></td>
-                                <td><?=$public->update?></td>
+                                <td>{{$public->questions}}</td>
+                                <td>{{$public->author}}</td>
+                                <td>{{$public->create}}</td>
+                                <td>{{$public->update}}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -107,10 +107,10 @@
                         <tbody>
                         @foreach($hiddens as $hidden)
                             <tr>
-                                <td><?=$hidden->questions?></td>
-                                <td><?=$hidden->author?></td>
-                                <td><?=$hidden->create?></td>
-                                <td><?=$hidden->update?></td>
+                                <td>{{$hidden->questions}}</td>
+                                <td>{{$hidden->author}}</td>
+                                <td>{{$hidden->create}}</td>
+                                <td>{{$hidden->update}}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -163,10 +163,10 @@
                         <tbody>
                         @foreach($unanswereds as $unanswered)
                             <tr>
-                                <td><?=$unanswered->questions?></td>
-                                <td><?=$unanswered->author?></td>
-                                <td><?=$unanswered->create?></td>
-                                <td><?=$unanswered->update?></td>
+                                <td>{{$unanswered->questions}}</td>
+                                <td>{{$unanswered->author}}</td>
+                                <td>{{$unanswered->create}}</td>
+                                <td>{{$unanswered->update}}</td>
                             </tr>
                         @endforeach
                         </tbody>
